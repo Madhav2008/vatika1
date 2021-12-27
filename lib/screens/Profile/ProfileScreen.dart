@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:vatika/screens/Home/HomeScreen.dart';
+import 'package:vatika/screens/Login/LoginScreen.dart';
+import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
 
 class Profile extends StatefulWidget {
@@ -642,6 +644,47 @@ class _ProfileState extends State<Profile> {
                             ),
                           ),
                         ],
+                      ),
+                      MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const LoginScreen(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            margin: EdgeInsets.only(top: size.height * 0.015),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.shade500,
+                                    blurRadius: 3,
+                                  )
+                                ],
+                                color: AppColor.primary1,
+                                borderRadius: BorderRadius.circular(35),
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 40,
+                                vertical: 7,
+                              ),
+                              child: Text(
+                                'Logout',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: size.width * 0.05,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              // color: AppColor.primary,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),

@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vatika/screens/Forgot_Password/Forgot_Password_Screen.dart';
-import 'package:vatika/screens/Navigation/NavigationScreen.dart';
+import 'package:vatika/screens/Home/HomeScreen.dart';
 import 'package:vatika/screens/Register/RegisterScreen.dart';
 import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
@@ -27,7 +27,11 @@ class _LoginScreenState extends State<LoginScreen> {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [AppColor.primaryLight, AppColor.primary]),
+              colors: [
+                // AppColor.primaryLight,
+                AppColor.primary1,
+                AppColor.primary1,
+              ]),
         ),
         child: Column(
           children: [
@@ -161,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(
                             "Forgot Password?",
                             style: AppTextStyle.style(
-                              color: AppColor.primary,
+                              color: AppColor.primary1,
                               fontSize: size.width * 0.038,
                               fontWeight: FontWeight.w700,
                             ),
@@ -173,9 +177,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => NavigationScreen()));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreen(),
+                          ),
+                        );
                       },
                       child: Container(
                         height: 56,
@@ -185,8 +191,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
-                              AppColor.primary,
-                              AppColor.primary.withOpacity(0.7)
+                              AppColor.primary1,
+                              AppColor.primary1.withOpacity(0.7)
                             ],
                           ),
                           boxShadow: [
@@ -207,8 +213,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                     child: Text(
                                       'SIGN IN',
                                       style: AppTextStyle.style(
-                                          fontSize: size.width * 0.040,
-                                          fontWeight: FontWeight.w600),
+                                        fontSize: size.width * 0.040,
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -250,7 +257,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Text(
                             ' Register',
                             style: AppTextStyle.style(
-                              color: AppColor.primary,
+                              color: AppColor.primary1,
                               fontWeight: FontWeight.w700,
                               fontSize: size.width * 0.038,
                             ),

@@ -25,7 +25,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [AppColor.primaryLight, AppColor.primary]),
+              colors: [
+                AppColor.primary1,
+                AppColor.primary1,
+              ]),
         ),
         child: Column(
           children: [
@@ -181,7 +184,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                         decoration: InputDecoration(
                           suffixIcon: Padding(
-                            padding: EdgeInsets.all(15),
+                            padding: EdgeInsets.all(
+                              15,
+                            ),
                             child: GestureDetector(
                               onTap: () {
                                 setState(() {
@@ -192,26 +197,41 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 Icons.remove_red_eye,
                                 size: size.width * 0.045,
                                 color: _isSecure
-                                    ? Colors.black.withOpacity(0.8)
-                                    : Colors.black.withOpacity(0.4),
+                                    ? Colors.black.withOpacity(
+                                        0.8,
+                                      )
+                                    : Colors.black.withOpacity(
+                                        0.4,
+                                      ),
                               ),
                             ),
                           ),
                           labelText: 'Confirm Password',
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: Colors.black.withOpacity(0.8)),
+                              color: Colors.black.withOpacity(
+                                0.8,
+                              ),
+                            ),
                           ),
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: Colors.black.withOpacity(0.8)),
+                              color: Colors.black.withOpacity(
+                                0.8,
+                              ),
+                            ),
                           ),
                           border: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: Colors.black.withOpacity(0.8)),
+                              color: Colors.black.withOpacity(
+                                0.8,
+                              ),
+                            ),
                           ),
                           labelStyle: AppTextStyle.style(
-                            color: Colors.black.withOpacity(0.8),
+                            color: Colors.black.withOpacity(
+                              0.8,
+                            ),
                             fontSize: size.width * 0.040,
                           ),
                         ),
@@ -220,20 +240,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => NavigationScreen()));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => NavigationScreen(),
+                            ),
+                          );
                         },
                         child: Container(
-                          height: 56,
+                          height: 86,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
                             gradient: LinearGradient(
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                               colors: [
-                                AppColor.primary,
-                                AppColor.primary.withOpacity(0.7)
+                                AppColor.primary1,
+                                AppColor.primary1.withOpacity(0.7),
                               ],
                             ),
                             boxShadow: [
@@ -263,9 +285,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(right: 20),
-                                child: Icon(Icons.arrow_forward,
-                                    color: Colors.white, size: 32),
-                              )
+                                child: Icon(
+                                  Icons.arrow_forward,
+                                  color: Colors.white,
+                                  size: 32,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -297,7 +322,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             child: Text(
                               ' Login',
                               style: AppTextStyle.style(
-                                color: AppColor.primary,
+                                color: AppColor.primary1,
                                 fontWeight: FontWeight.w700,
                                 fontSize: size.width * 0.038,
                               ),

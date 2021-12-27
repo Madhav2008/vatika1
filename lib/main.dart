@@ -11,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
-        debugShowCheckedModeBanner: false,
-        title: 'Vatika',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: SplashScreen());
+      debugShowCheckedModeBanner: false,
+      title: 'Vatika',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: SplashScreen(),
+    );
   }
 }

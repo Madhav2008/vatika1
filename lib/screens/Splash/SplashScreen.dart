@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:vatika/screens/Login/LoginScreen.dart';
+import 'package:vatika/styles/app_color.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -25,8 +26,8 @@ class _SplashScreenState extends State<SplashScreen> {
               end: Alignment.bottomRight,
               // colors: [Color(0xFF354FB4), Color(0xFF354FB4)]),
               colors: [
-                Colors.blue.shade900,
-                Colors.blue.shade700
+                AppColor.primary1,
+                AppColor.primary1.withOpacity(0.6),
                 // AppColor.primary,
                 // AppColor.primaryLight
               ]),

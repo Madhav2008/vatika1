@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:vatika/screens/Assignments/Assignments.dart';
 import 'package:vatika/screens/Fees/Fees_Screen.dart';
-import 'package:vatika/screens/Login/LoginScreen.dart';
 import 'package:vatika/screens/Notifications_Screen/Notifications_Screen.dart';
+import 'package:vatika/screens/Profile/ProfileScreen.dart';
 import 'package:vatika/screens/Quiz/screens/main_menu.dart';
 import 'package:vatika/screens/Time_Table/Time_Table.dart';
 import 'package:vatika/styles/app_color.dart';
@@ -27,12 +27,13 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                AppColor.primary,
-                AppColor.primary1,
-              ]),
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColor.primary1,
+              AppColor.primary1,
+            ],
+          ),
         ),
         child: Column(
           children: [
@@ -213,7 +214,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          const LoginScreen(),
+                                          const Profile(),
                                     ),
                                   );
                                 },
@@ -225,7 +226,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           begin: Alignment.topLeft,
                                           end: Alignment.bottomRight,
                                           colors: [
-                                            AppColor.primary,
+                                            AppColor.primary1,
                                             AppColor.primary1
                                           ]),
                                       // color: AppColor.primaryLight,
@@ -240,9 +241,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           const Padding(
                                             padding: EdgeInsets.only(
-                                                bottom: 10.0, top: 15.0),
+                                              bottom: 10.0,
+                                              top: 15.0,
+                                            ),
                                             child: Icon(
-                                              Icons.today,
+                                              Icons.person,
                                               size: 50,
                                               color: Colors.white,
                                             ),
@@ -253,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ),
                                             child: Center(
                                               child: Text(
-                                                'Holidays',
+                                                'Profile',
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: size.width * 0.045,
@@ -286,7 +289,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           begin: Alignment.topLeft,
                                           end: Alignment.bottomRight,
                                           colors: [
-                                            AppColor.primary,
+                                            AppColor.primary1,
                                             AppColor.primary1
                                           ]),
                                       // color: AppColor.primaryLight,
@@ -301,7 +304,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           const Padding(
                                             padding: EdgeInsets.only(
-                                                bottom: 10.0, top: 15.0),
+                                              bottom: 10.0,
+                                              top: 15.0,
+                                            ),
                                             child: Icon(
                                               Icons.timer,
                                               size: 50,
@@ -344,7 +349,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         begin: Alignment.topLeft,
                                         end: Alignment.bottomRight,
                                         colors: [
-                                          AppColor.primary,
+                                          AppColor.primary1,
                                           AppColor.primary1
                                         ]),
                                     // color: AppColor.primaryLight,
@@ -359,7 +364,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                       children: [
                                         const Padding(
                                           padding: EdgeInsets.only(
-                                              bottom: 10.0, top: 15.0),
+                                            bottom: 10.0,
+                                            top: 15.0,
+                                          ),
                                           child: Icon(
                                             Icons.assignment_outlined,
                                             size: 50,
@@ -415,7 +422,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           begin: Alignment.topLeft,
                                           end: Alignment.bottomRight,
                                           colors: [
-                                            AppColor.primary,
+                                            AppColor.primary1,
                                             AppColor.primary1
                                           ]),
                                       // color: AppColor.primaryLight,
@@ -430,7 +437,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           const Padding(
                                             padding: EdgeInsets.only(
-                                                bottom: 10.0, top: 15.0),
+                                              bottom: 10.0,
+                                              top: 15.0,
+                                            ),
                                             child: Icon(
                                               Icons.monetization_on_sharp,
                                               size: 50,
@@ -459,7 +468,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     //   child: Column(
                                     //     children: [
                                     //       Padding(
-                                    //         padding: const EdgeInsets.only(bottom: 10.0, top: 15.0),
+                                    //         padding: const EdgeInsets.only(bottom: 10.0, top: 15.0,),
                                     //         child: Icon(
                                     //           Icons.today,
                                     //           size: 50,
@@ -501,7 +510,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           begin: Alignment.topLeft,
                                           end: Alignment.bottomRight,
                                           colors: [
-                                            AppColor.primary,
+                                            AppColor.primary1,
                                             AppColor.primary1
                                           ]),
                                       // color: AppColor.primaryLight,
@@ -516,7 +525,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           const Padding(
                                             padding: EdgeInsets.only(
-                                                bottom: 10.0, top: 15.0),
+                                              bottom: 10.0,
+                                              top: 15.0,
+                                            ),
                                             child: Icon(
                                               Icons.notifications_active_sharp,
                                               size: 50,
@@ -546,7 +557,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     //   child: Column(
                                     //     children: [
                                     //       Padding(
-                                    //         padding: const EdgeInsets.only(bottom: 10.0, top: 15.0),
+                                    //         padding: const EdgeInsets.only(bottom: 10.0, top: 15.0,),
                                     //         child: Icon(
                                     //           Icons.today,
                                     //           size: 50,
@@ -588,7 +599,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           begin: Alignment.topLeft,
                                           end: Alignment.bottomRight,
                                           colors: [
-                                            AppColor.primary,
+                                            AppColor.primary1,
                                             AppColor.primary1
                                           ]),
                                       // color: AppColor.primaryLight,
@@ -603,7 +614,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           const Padding(
                                             padding: EdgeInsets.only(
-                                                bottom: 10.0, top: 15.0),
+                                              bottom: 10.0,
+                                              top: 15.0,
+                                            ),
                                             child: Icon(
                                               Icons.date_range_sharp,
                                               size: 50,
@@ -633,7 +646,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     //   child: Column(
                                     //     children: [
                                     //       Padding(
-                                    //         padding: const EdgeInsets.only(bottom: 10.0, top: 15.0),
+                                    //         padding: const EdgeInsets.only(bottom: 10.0, top: 15.0,),
                                     //         child: Icon(
                                     //           Icons.today,
                                     //           size: 50,

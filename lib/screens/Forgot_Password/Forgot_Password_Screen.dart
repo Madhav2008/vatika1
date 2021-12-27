@@ -30,7 +30,7 @@ class ForgetPasswordScreen extends StatelessWidget {
               child: Text(
                 'Forget Password?',
                 style: TextStyle(
-                  color: AppColor.primary,
+                  color: AppColor.primary1,
                   fontWeight: FontWeight.bold,
                   fontSize: size.width * 0.055,
                 ),
@@ -40,7 +40,7 @@ class ForgetPasswordScreen extends StatelessWidget {
               'Enter your registered email below',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: AppColor.primaryLight,
+                color: AppColor.primary1,
                 fontSize: size.width * 0.038,
               ),
             ),
@@ -54,18 +54,18 @@ class ForgetPasswordScreen extends StatelessWidget {
                 labelText: 'Email',
                 focusedBorder: UnderlineInputBorder(
                   borderSide:
-                      BorderSide(color: AppColor.primary.withOpacity(0.8)),
+                      BorderSide(color: AppColor.primary1.withOpacity(0.8)),
                 ),
                 enabledBorder: UnderlineInputBorder(
                   borderSide:
-                      BorderSide(color: AppColor.primary.withOpacity(0.8)),
+                      BorderSide(color: AppColor.primary1.withOpacity(0.8)),
                 ),
                 border: UnderlineInputBorder(
                   borderSide:
-                      BorderSide(color: AppColor.primary.withOpacity(0.8)),
+                      BorderSide(color: AppColor.primary1.withOpacity(0.8)),
                 ),
                 labelStyle: AppTextStyle.style(
-                    color: AppColor.primary.withOpacity(0.8),
+                    color: AppColor.primary1.withOpacity(0.8),
                     fontSize: size.width * 0.045),
               ),
             ),
@@ -85,8 +85,8 @@ class ForgetPasswordScreen extends StatelessWidget {
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      AppColor.primary,
-                      AppColor.primary.withOpacity(0.7)
+                      AppColor.primary1,
+                      AppColor.primary1.withOpacity(0.7)
                     ],
                   ),
                   boxShadow: [
@@ -148,7 +148,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                   child: Text(
                     ' SIGN IN',
                     style: AppTextStyle.style(
-                      color: AppColor.primary,
+                      color: AppColor.primary1,
                       fontWeight: FontWeight.w700,
                       fontSize: size.width * 0.038,
                     ),

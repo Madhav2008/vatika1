@@ -29,7 +29,7 @@ class SuccessPaswordScreen extends StatelessWidget {
                   ),
                   child: Icon(
                     Icons.check_circle_outline_sharp,
-                    color: AppColor.primaryLight,
+                    color: AppColor.primary1,
                     size: 80,
                   )
                   // child: Image.asset('assets/icons/SuccessIcon.svg'),
@@ -41,7 +41,7 @@ class SuccessPaswordScreen extends StatelessWidget {
                 child: Text(
                   'Success',
                   style: TextStyle(
-                    color: AppColor.primary,
+                    color: AppColor.primary1,
                     fontWeight: FontWeight.bold,
                     fontSize: size.width * 0.055,
                   ),
@@ -51,7 +51,7 @@ class SuccessPaswordScreen extends StatelessWidget {
                 'Please check your email to create\na new password',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: AppColor.primaryLight,
+                  color: AppColor.primary1,
                   fontSize: size.width * 0.038,
                 ),
               ),
@@ -83,7 +83,7 @@ class SuccessPaswordScreen extends StatelessWidget {
                         'Resend',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: AppColor.primary,
+                          color: AppColor.primary1,
                           fontWeight: FontWeight.w700,
                           fontSize: size.width * 0.04,
                         ),
@@ -105,8 +105,8 @@ class SuccessPaswordScreen extends StatelessWidget {
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
-                        AppColor.primary,
-                        AppColor.primary.withOpacity(0.7)
+                        AppColor.primary1,
+                        AppColor.primary1.withOpacity(0.7)
                       ],
                     ),
                     boxShadow: [
