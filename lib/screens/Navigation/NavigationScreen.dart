@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:vatika/screens/Home/HomeScreen.dart';
-import 'package:vatika/screens/Profile/Profile_Screen.dart';
+import 'package:vatika/screens/Profile/ProfileScreen.dart';
 import 'package:vatika/styles/app_color.dart';
 
 class NavigationScreen extends StatefulWidget {
@@ -28,7 +28,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
   List childrenBody = [
     HomeScreen(),
     // GalleryScreen(),
-    const ProfileScreen(),
+    const Profile(),
   ];
 
   @override

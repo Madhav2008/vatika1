@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:vatika/screens/Assignments/Assignments.dart';
+import 'package:vatika/screens/Fees/Fees_Screen.dart';
 import 'package:vatika/screens/Login/LoginScreen.dart';
 import 'package:vatika/screens/Notifications_Screen/Notifications_Screen.dart';
 import 'package:vatika/screens/Quiz/screens/main_menu.dart';
-import 'package:vatika/screens/SResult/SResult.dart';
 import 'package:vatika/screens/Time_Table/Time_Table.dart';
 import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
@@ -402,7 +402,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     context,
                                     MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          SResult(),
+                                          const Fees(),
                                     ),
                                   );
                                 },
@@ -432,7 +432,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                             padding: EdgeInsets.only(
                                                 bottom: 10.0, top: 15.0),
                                             child: Icon(
-                                              Icons.fact_check_sharp,
+                                              Icons.monetization_on_sharp,
                                               size: 50,
                                               color: Colors.white,
                                             ),
@@ -442,7 +442,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               padding: const EdgeInsets.only(
                                                   bottom: 15.0),
                                               child: Text(
-                                                'Result',
+                                                'Fees',
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: size.width * 0.045,
