@@ -15,7 +15,7 @@ class NotificationsScreen extends StatelessWidget {
           'Notifications',
           style: AppTextStyle.style(fontWeight: FontWeight.bold, fontSize: 20),
         ),
-        backgroundColor: AppColor.primary,
+        backgroundColor: AppColor.primary1,
       ),
       body: listView(),
     );

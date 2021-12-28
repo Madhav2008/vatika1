@@ -30,15 +30,15 @@ class _QuizzScreenState extends State<QuizzScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.primary1,
+      backgroundColor: AppColor.primary1.withOpacity(0.7),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                AppColor.primary,
                 AppColor.primary1,
+                AppColor.primary1.withOpacity(0.7),
               ]),
         ),
         child: Padding(
@@ -103,7 +103,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                             ? questions[index].answers!.values.toList()[i]
                                 ? Colors.green
                                 : Colors.red
-                            : AppColor.primary,
+                            : AppColor.primary1,
                         onPressed: !answered
                             ? () {
                                 if (questions[index]
@@ -145,7 +145,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                             );
                           },
                           shape: StadiumBorder(),
-                          fillColor: AppColor.primary,
+                          fillColor: AppColor.primary1,
                           padding: EdgeInsets.all(20.0),
                           elevation: 0.0,
                           child: Text(
@@ -180,7 +180,7 @@ class _QuizzScreenState extends State<QuizzScreen> {
                           }
                         },
                         shape: StadiumBorder(),
-                        fillColor: AppColor.primary,
+                        fillColor: AppColor.primary1,
                         padding: EdgeInsets.all(20.0),
                         elevation: 0.0,
                         child: Text(

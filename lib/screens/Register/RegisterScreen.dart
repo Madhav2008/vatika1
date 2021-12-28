@@ -1,7 +1,7 @@
 // ignore_for_file: file_names, sized_box_for_whitespace, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:vatika/screens/Navigation/NavigationScreen.dart';
+import 'package:vatika/screens/Home/HomeScreen.dart';
 import 'package:vatika/screens/Login/LoginScreen.dart';
 import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
@@ -75,7 +75,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   width: size.width,
-                  height: size.height / 1.6,
+                  height: size.height / 1.4,
                   child: Column(
                     children: [
                       SizedBox(height: 20),
@@ -236,18 +236,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 32),
+                      SizedBox(height: 22),
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => NavigationScreen(),
+                              builder: (context) => HomeScreen(),
                             ),
                           );
                         },
                         child: Container(
-                          height: 86,
+                          height: 56,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
                             gradient: LinearGradient(

@@ -46,8 +46,8 @@ class _ProfileState extends State<Profile> {
                       end: Alignment.bottomRight,
                       colors: [
                         // Colors.blue,
-                        Color(0xFF274686),
-                        Color(0xFF274686),
+                        AppColor.primary1,
+                        AppColor.primary1.withOpacity(0.8),
                       ],
                     ),
                     borderRadius: BorderRadius.only(

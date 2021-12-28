@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:vatika/screens/Home/HomeScreen.dart';
+import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
 
 class Assignments extends StatefulWidget {
@@ -19,13 +20,13 @@ class _AssignmentsState extends State<Assignments> {
     // var height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Colors.blue,
-              Color(0xFF274686),
+              AppColor.primary1,
+              AppColor.primary1.withOpacity(0.7),
             ],
           ),
         ),
@@ -106,14 +107,15 @@ class _AssignmentsState extends State<Assignments> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      top: 17.0, left: 17.0),
+                                    top: 17.0,
+                                    left: 17.0,
+                                  ),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color:
-                                          Colors.blue.shade300.withOpacity(0.5),
+                                      color: AppColor.primary.withOpacity(0.5),
                                       borderRadius: BorderRadius.circular(20),
                                     ),
-                                    child: const Padding(
+                                    child: Padding(
                                       padding: EdgeInsets.only(
                                         top: 10.0,
                                         left: 20.0,
@@ -125,7 +127,7 @@ class _AssignmentsState extends State<Assignments> {
                                         style: TextStyle(
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold,
-                                          color: Color(0xFF274686),
+                                          color: AppColor.primary1,
                                         ),
                                       ),
                                     ),
@@ -253,8 +255,8 @@ class _AssignmentsState extends State<Assignments> {
                                       child: Container(
                                         decoration: BoxDecoration(
                                           gradient: LinearGradient(colors: [
-                                            Colors.blue.shade800,
-                                            const Color(0xFF274686),
+                                            AppColor.primary1,
+                                            AppColor.primary1.withOpacity(0.7),
                                           ]),
                                           boxShadow: [
                                             BoxShadow(
@@ -262,7 +264,7 @@ class _AssignmentsState extends State<Assignments> {
                                               blurRadius: 3,
                                             )
                                           ],
-                                          color: Colors.blue.shade800,
+                                          color: AppColor.primary1,
                                           borderRadius:
                                               BorderRadius.circular(35),
                                         ),
@@ -327,11 +329,10 @@ class _AssignmentsState extends State<Assignments> {
                                       top: 17.0, left: 17.0),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color:
-                                          Colors.blue.shade300.withOpacity(0.5),
+                                      color: AppColor.primary.withOpacity(0.5),
                                       borderRadius: BorderRadius.circular(20),
                                     ),
-                                    child: const Padding(
+                                    child: Padding(
                                       padding: EdgeInsets.only(
                                         top: 10.0,
                                         left: 20.0,
@@ -343,7 +344,7 @@ class _AssignmentsState extends State<Assignments> {
                                         style: TextStyle(
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold,
-                                          color: Color(0xFF274686),
+                                          color: AppColor.primary1,
                                         ),
                                       ),
                                     ),
@@ -471,8 +472,8 @@ class _AssignmentsState extends State<Assignments> {
                                 //       child: Container(
                                 //         decoration: BoxDecoration(
                                 //           gradient: LinearGradient(colors: [
-                                //             Colors.blue.shade800,
-                                //             const Color(0xFF274686),
+                                //             AppColor.primary1,
+                                //             const AppColor.primary1,
                                 //           ]),
                                 //           boxShadow: [
                                 //             BoxShadow(
@@ -480,7 +481,7 @@ class _AssignmentsState extends State<Assignments> {
                                 //               blurRadius: 3,
                                 //             )
                                 //           ],
-                                //           color: Colors.blue.shade800,
+                                //           color: AppColor.primary1,
                                 //           borderRadius:
                                 //               BorderRadius.circular(35),
                                 //         ),
@@ -544,11 +545,10 @@ class _AssignmentsState extends State<Assignments> {
                                       top: 17.0, left: 17.0),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color:
-                                          Colors.blue.shade300.withOpacity(0.5),
+                                      color: AppColor.primary.withOpacity(0.5),
                                       borderRadius: BorderRadius.circular(20),
                                     ),
-                                    child: const Padding(
+                                    child: Padding(
                                       padding: EdgeInsets.only(
                                         top: 10.0,
                                         left: 20.0,
@@ -560,7 +560,7 @@ class _AssignmentsState extends State<Assignments> {
                                         style: TextStyle(
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold,
-                                          color: Color(0xFF274686),
+                                          color: AppColor.primary1,
                                         ),
                                       ),
                                     ),
@@ -688,8 +688,8 @@ class _AssignmentsState extends State<Assignments> {
                                 //       child: Container(
                                 //         decoration: BoxDecoration(
                                 //           gradient: LinearGradient(colors: [
-                                //             Colors.blue.shade800,
-                                //             const Color(0xFF274686),
+                                //             AppColor.primary1,
+                                //             const AppColor.primary1,
                                 //           ]),
                                 //           boxShadow: [
                                 //             BoxShadow(
@@ -697,7 +697,7 @@ class _AssignmentsState extends State<Assignments> {
                                 //               blurRadius: 3,
                                 //             )
                                 //           ],
-                                //           color: Colors.blue.shade800,
+                                //           color: AppColor.primary1,
                                 //           borderRadius:
                                 //               BorderRadius.circular(35),
                                 //         ),

@@ -60,7 +60,7 @@ class _MainMenuState extends State<MainMenu> {
         //   ),
         // ),
         // centerTitle: true,
-        backgroundColor: AppColor.primary,
+        backgroundColor: AppColor.primary1,
         automaticallyImplyLeading: false,
       ),
       body: Container(
@@ -70,8 +70,8 @@ class _MainMenuState extends State<MainMenu> {
               end: Alignment.bottomRight,
               // colors: [Color(0xFF354FB4), Color(0xFF354FB4)]),
               colors: [
-                AppColor.primary,
                 AppColor.primary1,
+                AppColor.primary1.withOpacity(0.7),
               ]),
         ),
         child: Padding(
@@ -105,7 +105,7 @@ class _MainMenuState extends State<MainMenu> {
                       );
                     },
                     shape: const StadiumBorder(),
-                    fillColor: AppColor.primary,
+                    fillColor: AppColor.primary1,
                     child: const Padding(
                       padding: EdgeInsets.symmetric(
                           vertical: 12.0, horizontal: 24.0),

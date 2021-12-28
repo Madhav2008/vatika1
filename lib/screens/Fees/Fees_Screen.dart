@@ -1,7 +1,8 @@
-// ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:vatika/screens/Home/HomeScreen.dart';
+import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
 
 class Fees extends StatefulWidget {
@@ -19,13 +20,13 @@ class _FeesState extends State<Fees> {
     // var height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFF274686),
-              Colors.blue,
+              AppColor.primary1,
+              AppColor.primary1.withOpacity(0.8),
             ],
           ),
         ),
@@ -310,8 +311,9 @@ class _FeesState extends State<Fees> {
                                         child: Container(
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
-                                              const Color(0xFF274686),
-                                              Colors.blue.shade800,
+                                              AppColor.primary1,
+                                              AppColor.primary1
+                                                  .withOpacity(0.5),
                                             ]),
                                             boxShadow: [
                                               BoxShadow(
@@ -319,7 +321,8 @@ class _FeesState extends State<Fees> {
                                                 blurRadius: 3,
                                               )
                                             ],
-                                            color: Colors.blue.shade800,
+                                            color: AppColor.primary1
+                                                .withOpacity(0.8),
                                             borderRadius: BorderRadius.only(
                                               bottomLeft: Radius.circular(20),
                                               bottomRight: Radius.circular(20),
@@ -588,8 +591,9 @@ class _FeesState extends State<Fees> {
                                         child: Container(
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
-                                              const Color(0xFF274686),
-                                              Colors.blue.shade800,
+                                              AppColor.primary1,
+                                              AppColor.primary1
+                                                  .withOpacity(0.5),
                                             ]),
                                             boxShadow: [
                                               BoxShadow(
@@ -597,7 +601,8 @@ class _FeesState extends State<Fees> {
                                                 blurRadius: 3,
                                               )
                                             ],
-                                            color: Colors.blue.shade800,
+                                            color: AppColor.primary1
+                                                .withOpacity(0.8),
                                             borderRadius: BorderRadius.only(
                                               bottomLeft: Radius.circular(20),
                                               bottomRight: Radius.circular(20),
@@ -866,8 +871,9 @@ class _FeesState extends State<Fees> {
                                         child: Container(
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
-                                              const Color(0xFF274686),
-                                              Colors.blue.shade800,
+                                              AppColor.primary1,
+                                              AppColor.primary1
+                                                  .withOpacity(0.5),
                                             ]),
                                             boxShadow: [
                                               BoxShadow(
@@ -875,7 +881,8 @@ class _FeesState extends State<Fees> {
                                                 blurRadius: 3,
                                               )
                                             ],
-                                            color: Colors.blue.shade800,
+                                            color: AppColor.primary1
+                                                .withOpacity(0.8),
                                             borderRadius: BorderRadius.only(
                                               bottomLeft: Radius.circular(20),
                                               bottomRight: Radius.circular(20),
