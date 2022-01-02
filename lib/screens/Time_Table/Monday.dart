@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:vatika/styles/app_color.dart';
@@ -26,6 +26,7 @@ class _MondayState extends State<Monday> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                   width: size.width,
+                  // height: 100,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
@@ -33,8 +34,8 @@ class _MondayState extends State<Monday> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
-                        padding: EdgeInsets.only(top: 17.0, left: 17.0),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
                         child: Text(
                           'Computer Science',
                           style: TextStyle(
@@ -43,8 +44,8 @@ class _MondayState extends State<Monday> {
                           ),
                         ),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 17.0, left: 17.0),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
                         child: Text(
                           '08:15am - 09:00am',
                           style: TextStyle(
@@ -53,8 +54,8 @@ class _MondayState extends State<Monday> {
                           ),
                         ),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.all(15.0),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
                         child: Divider(
                           color: Colors.grey,
                         ),
@@ -76,8 +77,9 @@ class _MondayState extends State<Monday> {
                               ),
                             ),
                           ),
-                          const Padding(
-                            padding: EdgeInsets.only(right: 20, bottom: 17.0),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(right: 20, bottom: 17.0),
                             child: Text(
                               'Period 1',
                               style: TextStyle(
@@ -105,18 +107,18 @@ class _MondayState extends State<Monday> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
-                        padding: EdgeInsets.only(top: 17.0, left: 17.0),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
                         child: Text(
-                          'Biology',
+                          'Mathematics',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 17.0, left: 17.0),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
                         child: Text(
                           '09:15am - 10:00am',
                           style: TextStyle(
@@ -125,8 +127,8 @@ class _MondayState extends State<Monday> {
                           ),
                         ),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.all(15.0),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
                         child: Divider(
                           color: Colors.grey,
                         ),
@@ -148,8 +150,9 @@ class _MondayState extends State<Monday> {
                               ),
                             ),
                           ),
-                          const Padding(
-                            padding: EdgeInsets.only(right: 20, bottom: 17.0),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(right: 20, bottom: 17.0),
                             child: Text(
                               'Period 2',
                               style: TextStyle(
@@ -177,8 +180,8 @@ class _MondayState extends State<Monday> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Padding(
-                        padding: EdgeInsets.only(top: 17.0, left: 17.0),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
                         child: Text(
                           'Physics',
                           style: TextStyle(
@@ -187,8 +190,8 @@ class _MondayState extends State<Monday> {
                           ),
                         ),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.only(top: 17.0, left: 17.0),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
                         child: Text(
                           '10:15am - 11:00am',
                           style: TextStyle(
@@ -197,8 +200,8 @@ class _MondayState extends State<Monday> {
                           ),
                         ),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.all(15.0),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
                         child: Divider(
                           color: Colors.grey,
                         ),
@@ -220,10 +223,230 @@ class _MondayState extends State<Monday> {
                               ),
                             ),
                           ),
-                          const Padding(
-                            padding: EdgeInsets.only(right: 20, bottom: 17.0),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(right: 20, bottom: 17.0),
                             child: Text(
                               'Period 3',
+                              style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  width: size.width,
+                  // height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
+                        child: Text(
+                          'History',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
+                        child: Text(
+                          '11:15am - 12:00pm',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Divider(
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 17, bottom: 17.0),
+                                child: Text(
+                                  'PRIYA ARORA',
+                                  style: AppTextStyle.style(
+                                    fontSize: 14,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(right: 20, bottom: 17.0),
+                            child: Text(
+                              'Period 4',
+                              style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  width: size.width,
+                  // height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
+                        child: Text(
+                          'Biology',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
+                        child: Text(
+                          '12:15pm - 1:00pm',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Divider(
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 17, bottom: 17.0),
+                                child: Text(
+                                  'PRIYA ARORA',
+                                  style: AppTextStyle.style(
+                                    fontSize: 14,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(right: 20, bottom: 17.0),
+                            child: Text(
+                              'Period 5',
+                              style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  width: size.width,
+                  // height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
+                        child: Text(
+                          'English',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 17.0, left: 17.0),
+                        child: Text(
+                          '1:15pm - 2:00pm',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Divider(
+                          color: Colors.grey,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 17, bottom: 17.0),
+                                child: Text(
+                                  'PRIYA ARORA',
+                                  style: AppTextStyle.style(
+                                    fontSize: 14,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(right: 20, bottom: 17.0),
+                            child: Text(
+                              'Period 6',
                               style: TextStyle(
                                 fontSize: 17,
                                 color: Colors.black,

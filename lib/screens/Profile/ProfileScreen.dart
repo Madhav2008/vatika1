@@ -111,7 +111,7 @@ class _ProfileState extends State<Profile> {
                                   left: 15.0,
                                 ),
                                 child: Text(
-                                  "Hi Madhav",
+                                  "Madhav Arora",
                                   style: AppTextStyle.style(
                                     fontSize: size.width * 0.065,
                                     fontWeight: FontWeight.w600,

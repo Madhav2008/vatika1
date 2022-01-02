@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:vatika/screens/Forgot_Password/Forgot_Password_Screen.dart';
 import 'package:vatika/screens/Home/HomeScreen.dart';
-import 'package:vatika/screens/Register/RegisterScreen.dart';
+import 'package:vatika/screens/Register/Register_Screen.dart';
 import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
 

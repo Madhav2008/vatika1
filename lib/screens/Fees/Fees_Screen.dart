@@ -17,7 +17,6 @@ class _FeesState extends State<Fees> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var size = MediaQuery.of(context).size;
-    // var height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
