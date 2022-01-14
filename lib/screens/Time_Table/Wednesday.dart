@@ -25,10 +25,6 @@ class _WednesdayState extends State<Wednesday> {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? Colors.white
             : Colors.black;
-    final primary1text =
-        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
-            ? Colors.white
-            : AppColor.primary1;
     return SingleChildScrollView(
       child: Container(
         color: AppColor.primary1,
