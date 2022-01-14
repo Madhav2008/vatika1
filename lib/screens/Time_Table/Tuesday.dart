@@ -1,6 +1,8 @@
 // ignore_for_file: file_names, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:vatika/screens/Theme/provider/theme_provider.dart';
 import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
 
@@ -15,6 +17,18 @@ class _TuesdayState extends State<Tuesday> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    final greybox =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade900
+            : Colors.white;
+    final blacktext =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.white
+            : Colors.black;
+    final primary1text =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.white
+            : AppColor.primary1;
     return SingleChildScrollView(
       child: Container(
         color: AppColor.primary1,
@@ -26,9 +40,8 @@ class _TuesdayState extends State<Tuesday> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                   width: size.width,
-                  // height: 100,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: greybox,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -84,7 +97,7 @@ class _TuesdayState extends State<Tuesday> {
                               'Period 1',
                               style: TextStyle(
                                 fontSize: 17,
-                                color: Colors.black,
+                                color: blacktext,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -99,9 +112,8 @@ class _TuesdayState extends State<Tuesday> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                   width: size.width,
-                  // height: 100,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: greybox,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -157,7 +169,7 @@ class _TuesdayState extends State<Tuesday> {
                               'Period 2',
                               style: TextStyle(
                                 fontSize: 17,
-                                color: Colors.black,
+                                color: blacktext,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -172,9 +184,8 @@ class _TuesdayState extends State<Tuesday> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                   width: size.width,
-                  // height: 100,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: greybox,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -230,7 +241,7 @@ class _TuesdayState extends State<Tuesday> {
                               'Period 3',
                               style: TextStyle(
                                 fontSize: 17,
-                                color: Colors.black,
+                                color: blacktext,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -245,9 +256,8 @@ class _TuesdayState extends State<Tuesday> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                   width: size.width,
-                  // height: 100,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: greybox,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -303,7 +313,7 @@ class _TuesdayState extends State<Tuesday> {
                               'Period 4',
                               style: TextStyle(
                                 fontSize: 17,
-                                color: Colors.black,
+                                color: blacktext,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -318,9 +328,8 @@ class _TuesdayState extends State<Tuesday> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                   width: size.width,
-                  // height: 100,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: greybox,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -376,7 +385,7 @@ class _TuesdayState extends State<Tuesday> {
                               'Period 5',
                               style: TextStyle(
                                 fontSize: 17,
-                                color: Colors.black,
+                                color: blacktext,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -391,9 +400,8 @@ class _TuesdayState extends State<Tuesday> {
                 padding: const EdgeInsets.all(20.0),
                 child: Container(
                   width: size.width,
-                  // height: 100,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: greybox,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
@@ -449,7 +457,7 @@ class _TuesdayState extends State<Tuesday> {
                               'Period 6',
                               style: TextStyle(
                                 fontSize: 17,
-                                color: Colors.black,
+                                color: blacktext,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
