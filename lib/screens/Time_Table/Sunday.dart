@@ -18,8 +18,8 @@ class _SundayState extends State<Sunday> {
     var size = MediaQuery.of(context).size;
     final blacktext =
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
-            ? Colors.white
-            : Colors.black;
+            ? Colors.black
+            : Colors.white;
     return Container(
       color: AppColor.primary1,
       child: Center(
