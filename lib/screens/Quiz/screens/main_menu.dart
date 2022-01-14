@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:vatika/screens/Home/HomeScreen.dart';
 import 'package:vatika/screens/Quiz/screens/quizz_screen.dart';
+import 'package:vatika/screens/Theme/provider/theme_provider.dart';
 import 'package:vatika/styles/app_color.dart';
 
 class MainMenu extends StatefulWidget {
@@ -52,6 +54,14 @@ class _MainMenuState extends State<MainMenu> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    final color =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.white
+            : Colors.black;
+    final color1 =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade900.withOpacity(0.8)
+            : Colors.white;
     return Scaffold(
       appBar: AppBar(
         title: Row(
@@ -90,15 +100,6 @@ class _MainMenuState extends State<MainMenu> {
             ),
           ],
         ),
-        // title: Text(
-        //   'Take Quiz',
-        //   style: TextStyle(
-        //     fontSize: 20,
-        //     fontWeight: FontWeight.bold,
-        //     color: Colors.white,
-        //   ),
-        // ),
-        // centerTitle: true,
         backgroundColor: AppColor.primary1,
         automaticallyImplyLeading: false,
       ),
@@ -163,7 +164,7 @@ class _MainMenuState extends State<MainMenu> {
                   vertical: 4,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: color1,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: Colors.black,
@@ -176,13 +177,14 @@ class _MainMenuState extends State<MainMenu> {
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      color: color,
                     ),
                   ),
                   value: value,
                   iconSize: 36,
                   icon: Icon(
                     Icons.arrow_drop_down,
-                    color: Colors.black,
+                    color: color,
                   ),
                   isExpanded: true,
                   items: classes.map(buildMenuItem).toList(),
@@ -201,7 +203,7 @@ class _MainMenuState extends State<MainMenu> {
                   vertical: 4,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: color1,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: Colors.black,
@@ -212,15 +214,15 @@ class _MainMenuState extends State<MainMenu> {
                   hint: Text(
                     hint2,
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: color),
                   ),
                   value: value1,
                   iconSize: 36,
                   icon: Icon(
                     Icons.arrow_drop_down,
-                    color: Colors.black,
+                    color: color,
                   ),
                   isExpanded: true,
                   items: subjects.map(buildMenuItem1).toList(),

@@ -1,7 +1,9 @@
 // ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:vatika/screens/Home/HomeScreen.dart';
+import 'package:vatika/screens/Theme/provider/theme_provider.dart';
 import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
 
@@ -17,6 +19,18 @@ class _FeesState extends State<Fees> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var size = MediaQuery.of(context).size;
+    final greybox =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade900
+            : Colors.white;
+    final blacktext =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.white
+            : Colors.black;
+    final shadow =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.white38
+            : Colors.black12;
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -25,7 +39,9 @@ class _FeesState extends State<Fees> {
             end: Alignment.bottomRight,
             colors: [
               AppColor.primary1,
-              AppColor.primary1.withOpacity(0.8),
+              AppColor.primary1.withOpacity(
+                0.8,
+              ),
             ],
           ),
         ),
@@ -35,7 +51,9 @@ class _FeesState extends State<Fees> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
+                  padding: const EdgeInsets.only(
+                    left: 8.0,
+                  ),
                   child: IconButton(
                     icon: const Icon(
                       Icons.arrow_back_ios_sharp,
@@ -52,7 +70,9 @@ class _FeesState extends State<Fees> {
                   ),
                 ),
                 const Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(
+                    15,
+                  ),
                   child: Text(
                     'Fees',
                     style: TextStyle(
@@ -60,7 +80,6 @@ class _FeesState extends State<Fees> {
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
-                    // ),
                   ),
                 ),
               ],
@@ -68,14 +87,19 @@ class _FeesState extends State<Fees> {
             Expanded(
               child: SingleChildScrollView(
                 child: Container(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(
+                    15,
+                  ),
                   width: width,
-                  // height: height,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
+                  decoration: BoxDecoration(
+                    color: greybox,
                     borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(38),
-                      topLeft: Radius.circular(38),
+                      topRight: Radius.circular(
+                        38,
+                      ),
+                      topLeft: Radius.circular(
+                        38,
+                      ),
                     ),
                   ),
                   child: Align(
@@ -83,19 +107,23 @@ class _FeesState extends State<Fees> {
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(
+                            20,
+                          ),
                           child: Container(
                             width: size.width,
-                            // height: 250,
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              // ignore: duplicate_ignore
+                              color: greybox,
+                              borderRadius: BorderRadius.circular(
+                                20,
+                              ),
                               boxShadow: [
-                                // ignore: const prefer_const_constructors
                                 BoxShadow(
-                                  color: Colors.black12,
-                                  offset: const Offset(3.0, 3.0),
+                                  color: shadow,
+                                  offset: const Offset(
+                                    3.0,
+                                    3.0,
+                                  ),
                                   blurRadius: 5.0,
                                   spreadRadius: 3.0,
                                 ),
@@ -132,7 +160,7 @@ class _FeesState extends State<Fees> {
                                         '90871',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -178,7 +206,7 @@ class _FeesState extends State<Fees> {
                                         'November',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -213,7 +241,7 @@ class _FeesState extends State<Fees> {
                                         '8 Nov 2020',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -246,7 +274,7 @@ class _FeesState extends State<Fees> {
                                         'Pending',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -285,12 +313,14 @@ class _FeesState extends State<Fees> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(
-                                          right: 20, bottom: 17.0),
+                                        right: 20,
+                                        bottom: 17.0,
+                                      ),
                                       child: Text(
                                         '₹ 3000',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -303,16 +333,13 @@ class _FeesState extends State<Fees> {
                                     child: GestureDetector(
                                       onTap: () {},
                                       child: Container(
-                                        // margin: const EdgeInsets.only(
-                                        //   top: 16,
-                                        //   bottom: 16,
-                                        // ),
                                         child: Container(
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
                                               AppColor.primary1,
-                                              AppColor.primary1
-                                                  .withOpacity(0.5),
+                                              AppColor.primary1.withOpacity(
+                                                0.5,
+                                              ),
                                             ]),
                                             boxShadow: [
                                               BoxShadow(
@@ -320,19 +347,23 @@ class _FeesState extends State<Fees> {
                                                 blurRadius: 3,
                                               )
                                             ],
-                                            color: AppColor.primary1
-                                                .withOpacity(0.8),
+                                            color:
+                                                AppColor.primary1.withOpacity(
+                                              0.8,
+                                            ),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(20),
-                                              bottomRight: Radius.circular(20),
+                                              bottomLeft: Radius.circular(
+                                                20,
+                                              ),
+                                              bottomRight: Radius.circular(
+                                                20,
+                                              ),
                                             ),
                                           ),
                                           padding: EdgeInsets.symmetric(
                                             horizontal: 146,
                                             vertical: 10,
                                           ),
-                                          // child: MouseRegion(
-                                          // cursor: SystemMouseCursors.click,
                                           child: GestureDetector(
                                             child: const Text(
                                               'Pay Now ➡',
@@ -343,7 +374,6 @@ class _FeesState extends State<Fees> {
                                                 letterSpacing: 3,
                                               ),
                                             ),
-                                            // color: AppColor.primary,
                                             onTap: () {
                                               // Navigator.push(
                                               //   context,
@@ -363,19 +393,23 @@ class _FeesState extends State<Fees> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(
+                            20,
+                          ),
                           child: Container(
                             width: size.width,
-                            // height: 250,
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              // ignore: duplicate_ignore
+                              color: greybox,
+                              borderRadius: BorderRadius.circular(
+                                20,
+                              ),
                               boxShadow: [
-                                // ignore: const prefer_const_constructors
                                 BoxShadow(
-                                  color: Colors.black12,
-                                  offset: const Offset(3.0, 3.0),
+                                  color: shadow,
+                                  offset: const Offset(
+                                    3.0,
+                                    3.0,
+                                  ),
                                   blurRadius: 5.0,
                                   spreadRadius: 3.0,
                                 ),
@@ -412,7 +446,7 @@ class _FeesState extends State<Fees> {
                                         '90870',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -458,7 +492,7 @@ class _FeesState extends State<Fees> {
                                         'September',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -493,7 +527,7 @@ class _FeesState extends State<Fees> {
                                         '8 Sep 2020',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -526,7 +560,7 @@ class _FeesState extends State<Fees> {
                                         'Paid',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -565,12 +599,14 @@ class _FeesState extends State<Fees> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(
-                                          right: 20, bottom: 17.0),
+                                        right: 20,
+                                        bottom: 17.0,
+                                      ),
                                       child: Text(
                                         '₹ 3000',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -583,16 +619,13 @@ class _FeesState extends State<Fees> {
                                     child: GestureDetector(
                                       onTap: () {},
                                       child: Container(
-                                        // margin: const EdgeInsets.only(
-                                        //   top: 16,
-                                        //   bottom: 16,
-                                        // ),
                                         child: Container(
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
                                               AppColor.primary1,
-                                              AppColor.primary1
-                                                  .withOpacity(0.5),
+                                              AppColor.primary1.withOpacity(
+                                                0.5,
+                                              ),
                                             ]),
                                             boxShadow: [
                                               BoxShadow(
@@ -600,19 +633,23 @@ class _FeesState extends State<Fees> {
                                                 blurRadius: 3,
                                               )
                                             ],
-                                            color: AppColor.primary1
-                                                .withOpacity(0.8),
+                                            color:
+                                                AppColor.primary1.withOpacity(
+                                              0.8,
+                                            ),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(20),
-                                              bottomRight: Radius.circular(20),
+                                              bottomLeft: Radius.circular(
+                                                20,
+                                              ),
+                                              bottomRight: Radius.circular(
+                                                20,
+                                              ),
                                             ),
                                           ),
                                           padding: EdgeInsets.symmetric(
                                             horizontal: 140,
                                             vertical: 10,
                                           ),
-                                          // child: MouseRegion(
-                                          // cursor: SystemMouseCursors.click,
                                           child: GestureDetector(
                                             child: const Text(
                                               'Download ⬇',
@@ -623,7 +660,6 @@ class _FeesState extends State<Fees> {
                                                 letterSpacing: 3,
                                               ),
                                             ),
-                                            // color: AppColor.primary,
                                             onTap: () {
                                               // Navigator.push(
                                               //   context,
@@ -643,19 +679,23 @@ class _FeesState extends State<Fees> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(
+                            20,
+                          ),
                           child: Container(
                             width: size.width,
-                            // height: 250,
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              // ignore: duplicate_ignore
+                              color: greybox,
+                              borderRadius: BorderRadius.circular(
+                                20,
+                              ),
                               boxShadow: [
-                                // ignore: const prefer_const_constructors
                                 BoxShadow(
-                                  color: Colors.black12,
-                                  offset: const Offset(3.0, 3.0),
+                                  color: shadow,
+                                  offset: const Offset(
+                                    3.0,
+                                    3.0,
+                                  ),
                                   blurRadius: 5.0,
                                   spreadRadius: 3.0,
                                 ),
@@ -692,7 +732,7 @@ class _FeesState extends State<Fees> {
                                         '90869',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -738,7 +778,7 @@ class _FeesState extends State<Fees> {
                                         'August',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -773,7 +813,7 @@ class _FeesState extends State<Fees> {
                                         '8 Aug 2020',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -806,7 +846,7 @@ class _FeesState extends State<Fees> {
                                         'Paid',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -845,12 +885,14 @@ class _FeesState extends State<Fees> {
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(
-                                          right: 20, bottom: 17.0),
+                                        right: 20,
+                                        bottom: 17.0,
+                                      ),
                                       child: Text(
                                         '₹ 3000',
                                         style: TextStyle(
                                           fontSize: 17,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -863,16 +905,13 @@ class _FeesState extends State<Fees> {
                                     child: GestureDetector(
                                       onTap: () {},
                                       child: Container(
-                                        // margin: const EdgeInsets.only(
-                                        //   top: 16,
-                                        //   bottom: 16,
-                                        // ),
                                         child: Container(
                                           decoration: BoxDecoration(
                                             gradient: LinearGradient(colors: [
                                               AppColor.primary1,
-                                              AppColor.primary1
-                                                  .withOpacity(0.5),
+                                              AppColor.primary1.withOpacity(
+                                                0.5,
+                                              ),
                                             ]),
                                             boxShadow: [
                                               BoxShadow(
@@ -880,19 +919,23 @@ class _FeesState extends State<Fees> {
                                                 blurRadius: 3,
                                               )
                                             ],
-                                            color: AppColor.primary1
-                                                .withOpacity(0.8),
+                                            color:
+                                                AppColor.primary1.withOpacity(
+                                              0.8,
+                                            ),
                                             borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(20),
-                                              bottomRight: Radius.circular(20),
+                                              bottomLeft: Radius.circular(
+                                                20,
+                                              ),
+                                              bottomRight: Radius.circular(
+                                                20,
+                                              ),
                                             ),
                                           ),
                                           padding: EdgeInsets.symmetric(
                                             horizontal: 140,
                                             vertical: 10,
                                           ),
-                                          // child: MouseRegion(
-                                          // cursor: SystemMouseCursors.click,
                                           child: GestureDetector(
                                             child: const Text(
                                               'Download ⬇',
@@ -903,7 +946,6 @@ class _FeesState extends State<Fees> {
                                                 letterSpacing: 3,
                                               ),
                                             ),
-                                            // color: AppColor.primary,
                                             onTap: () {
                                               // Navigator.push(
                                               //   context,

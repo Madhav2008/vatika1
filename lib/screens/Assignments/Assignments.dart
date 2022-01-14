@@ -1,7 +1,9 @@
 // ignore_for_file: file_names, prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:vatika/screens/Home/HomeScreen.dart';
+import 'package:vatika/screens/Theme/provider/theme_provider.dart';
 import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
 
@@ -17,7 +19,22 @@ class _AssignmentsState extends State<Assignments> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var size = MediaQuery.of(context).size;
-    // var height = MediaQuery.of(context).size.height;
+    final greybox =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade900
+            : Colors.white;
+    final blacktext =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.white
+            : Colors.black;
+    final primary1text =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.white
+            : AppColor.primary1;
+    final shadow =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.white38
+            : Colors.black12;
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -26,7 +43,9 @@ class _AssignmentsState extends State<Assignments> {
             end: Alignment.bottomRight,
             colors: [
               AppColor.primary1,
-              AppColor.primary1.withOpacity(0.7),
+              AppColor.primary1.withOpacity(
+                0.7,
+              ),
             ],
           ),
         ),
@@ -36,7 +55,9 @@ class _AssignmentsState extends State<Assignments> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
+                  padding: const EdgeInsets.only(
+                    left: 8.0,
+                  ),
                   child: IconButton(
                     icon: const Icon(
                       Icons.arrow_back_ios_sharp,
@@ -53,7 +74,9 @@ class _AssignmentsState extends State<Assignments> {
                   ),
                 ),
                 const Padding(
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(
+                    15,
+                  ),
                   child: Text(
                     'Assignments',
                     style: TextStyle(
@@ -61,7 +84,6 @@ class _AssignmentsState extends State<Assignments> {
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
                     ),
-                    // ),
                   ),
                 ),
               ],
@@ -69,14 +91,19 @@ class _AssignmentsState extends State<Assignments> {
             Expanded(
               child: SingleChildScrollView(
                 child: Container(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(
+                    15,
+                  ),
                   width: width,
-                  // height: height,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
+                  decoration: BoxDecoration(
+                    color: greybox,
                     borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(38),
-                      topLeft: Radius.circular(38),
+                      topRight: Radius.circular(
+                        38,
+                      ),
+                      topLeft: Radius.circular(
+                        38,
+                      ),
                     ),
                   ),
                   child: Align(
@@ -84,19 +111,23 @@ class _AssignmentsState extends State<Assignments> {
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.all(
+                            20.0,
+                          ),
                           child: Container(
                             width: size.width,
-                            // height: 250,
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
-                              // ignore: duplicate_ignore
+                              color: greybox,
+                              borderRadius: BorderRadius.circular(
+                                20,
+                              ),
                               boxShadow: [
-                                // ignore: const prefer_const_constructors
                                 BoxShadow(
-                                  color: Colors.black12,
-                                  offset: const Offset(3.0, 3.0),
+                                  color: shadow,
+                                  offset: const Offset(
+                                    3.0,
+                                    3.0,
+                                  ),
                                   blurRadius: 5.0,
                                   spreadRadius: 3.0,
                                 ),
@@ -112,8 +143,12 @@ class _AssignmentsState extends State<Assignments> {
                                   ),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: AppColor.primary.withOpacity(0.5),
-                                      borderRadius: BorderRadius.circular(20),
+                                      color: AppColor.primary.withOpacity(
+                                        0.5,
+                                      ),
+                                      borderRadius: BorderRadius.circular(
+                                        20,
+                                      ),
                                     ),
                                     child: Padding(
                                       padding: EdgeInsets.only(
@@ -127,20 +162,22 @@ class _AssignmentsState extends State<Assignments> {
                                         style: TextStyle(
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold,
-                                          color: AppColor.primary1,
+                                          color: primary1text,
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-                                const Padding(
-                                  padding:
-                                      EdgeInsets.only(top: 17.0, left: 17.0),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 17.0,
+                                    left: 17.0,
+                                  ),
                                   child: Text(
                                     'Red Blood Cells',
                                     style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.black,
+                                      color: blacktext,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -151,7 +188,9 @@ class _AssignmentsState extends State<Assignments> {
                                       child: GestureDetector(
                                         child: Padding(
                                           padding: const EdgeInsets.only(
-                                              left: 17, top: 12),
+                                            left: 17,
+                                            top: 12,
+                                          ),
                                           child: Text(
                                             'Assign Date',
                                             style: AppTextStyle.style(
@@ -162,14 +201,16 @@ class _AssignmentsState extends State<Assignments> {
                                         ),
                                       ),
                                     ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(right: 20, top: 15.0),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        right: 20,
+                                        top: 15.0,
+                                      ),
                                       child: Text(
                                         '17 Nov 2021',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -182,7 +223,9 @@ class _AssignmentsState extends State<Assignments> {
                                       child: GestureDetector(
                                         child: Padding(
                                           padding: const EdgeInsets.only(
-                                              left: 17, top: 7),
+                                            left: 17,
+                                            top: 7,
+                                          ),
                                           child: Text(
                                             'Last Date',
                                             style: AppTextStyle.style(
@@ -193,14 +236,16 @@ class _AssignmentsState extends State<Assignments> {
                                         ),
                                       ),
                                     ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(right: 20, top: 7.0),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        right: 20,
+                                        top: 7.0,
+                                      ),
                                       child: Text(
                                         '20 Nov 2021',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -227,7 +272,7 @@ class _AssignmentsState extends State<Assignments> {
                                         ),
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding: EdgeInsets.only(
                                         right: 20,
                                         top: 7.0,
@@ -237,7 +282,7 @@ class _AssignmentsState extends State<Assignments> {
                                         'Pending',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -254,19 +299,24 @@ class _AssignmentsState extends State<Assignments> {
                                       ),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          gradient: LinearGradient(colors: [
-                                            AppColor.primary1,
-                                            AppColor.primary1.withOpacity(0.7),
-                                          ]),
+                                          gradient: LinearGradient(
+                                            colors: [
+                                              AppColor.primary1,
+                                              AppColor.primary1.withOpacity(
+                                                0.7,
+                                              ),
+                                            ],
+                                          ),
                                           boxShadow: [
                                             BoxShadow(
                                               color: Colors.grey.shade500,
                                               blurRadius: 3,
-                                            )
+                                            ),
                                           ],
                                           color: AppColor.primary1,
-                                          borderRadius:
-                                              BorderRadius.circular(35),
+                                          borderRadius: BorderRadius.circular(
+                                            35,
+                                          ),
                                         ),
                                         padding: const EdgeInsets.symmetric(
                                           horizontal: 47,
@@ -284,7 +334,6 @@ class _AssignmentsState extends State<Assignments> {
                                                 letterSpacing: 2,
                                               ),
                                             ),
-                                            // color: AppColor.primary,
                                             onTap: () {
                                               // Navigator.push(
                                               //   context,
@@ -304,18 +353,23 @@ class _AssignmentsState extends State<Assignments> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.all(
+                            20.0,
+                          ),
                           child: Container(
                             width: size.width,
-                            // height: 250,
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
+                              color: greybox,
+                              borderRadius: BorderRadius.circular(
+                                20,
+                              ),
                               boxShadow: [
-                                // ignore: const prefer_const_constructors
                                 BoxShadow(
-                                  color: Colors.black12,
-                                  offset: const Offset(3.0, 3.0),
+                                  color: shadow,
+                                  offset: const Offset(
+                                    3.0,
+                                    3.0,
+                                  ),
                                   blurRadius: 5.0,
                                   spreadRadius: 3.0,
                                 ),
@@ -326,11 +380,17 @@ class _AssignmentsState extends State<Assignments> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      top: 17.0, left: 17.0),
+                                    top: 17.0,
+                                    left: 17.0,
+                                  ),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: AppColor.primary.withOpacity(0.5),
-                                      borderRadius: BorderRadius.circular(20),
+                                      color: AppColor.primary.withOpacity(
+                                        0.5,
+                                      ),
+                                      borderRadius: BorderRadius.circular(
+                                        20,
+                                      ),
                                     ),
                                     child: Padding(
                                       padding: EdgeInsets.only(
@@ -344,20 +404,22 @@ class _AssignmentsState extends State<Assignments> {
                                         style: TextStyle(
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold,
-                                          color: AppColor.primary1,
+                                          color: primary1text,
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-                                const Padding(
-                                  padding:
-                                      EdgeInsets.only(top: 17.0, left: 17.0),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 17.0,
+                                    left: 17.0,
+                                  ),
                                   child: Text(
                                     'BOHR Theory',
                                     style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.black,
+                                      color: blacktext,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -368,7 +430,9 @@ class _AssignmentsState extends State<Assignments> {
                                       child: GestureDetector(
                                         child: Padding(
                                           padding: const EdgeInsets.only(
-                                              left: 17, top: 12),
+                                            left: 17,
+                                            top: 12,
+                                          ),
                                           child: Text(
                                             'Assign Date',
                                             style: AppTextStyle.style(
@@ -379,14 +443,16 @@ class _AssignmentsState extends State<Assignments> {
                                         ),
                                       ),
                                     ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(right: 20, top: 15.0),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        right: 20,
+                                        top: 15.0,
+                                      ),
                                       child: Text(
                                         '11 Nov 2021',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -399,7 +465,9 @@ class _AssignmentsState extends State<Assignments> {
                                       child: GestureDetector(
                                         child: Padding(
                                           padding: const EdgeInsets.only(
-                                              left: 17, top: 7),
+                                            left: 17,
+                                            top: 7,
+                                          ),
                                           child: Text(
                                             'Last Date',
                                             style: AppTextStyle.style(
@@ -410,14 +478,16 @@ class _AssignmentsState extends State<Assignments> {
                                         ),
                                       ),
                                     ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(right: 20, top: 7.0),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        right: 20,
+                                        top: 7.0,
+                                      ),
                                       child: Text(
                                         '20 Nov 2021',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -444,7 +514,7 @@ class _AssignmentsState extends State<Assignments> {
                                         ),
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding: EdgeInsets.only(
                                         right: 20,
                                         top: 7.0,
@@ -454,84 +524,35 @@ class _AssignmentsState extends State<Assignments> {
                                         'Submitted',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     )
                                   ],
                                 ),
-                                // Center(
-                                //   child: GestureDetector(
-                                //     onTap: () {},
-                                //     child: Container(
-                                //       margin: const EdgeInsets.only(
-                                //         top: 16,
-                                //         bottom: 16,
-                                //       ),
-                                //       child: Container(
-                                //         decoration: BoxDecoration(
-                                //           gradient: LinearGradient(colors: [
-                                //             AppColor.primary1,
-                                //             const AppColor.primary1,
-                                //           ]),
-                                //           boxShadow: [
-                                //             BoxShadow(
-                                //               color: Colors.grey.shade500,
-                                //               blurRadius: 3,
-                                //             )
-                                //           ],
-                                //           color: AppColor.primary1,
-                                //           borderRadius:
-                                //               BorderRadius.circular(35),
-                                //         ),
-                                //         padding: const EdgeInsets.symmetric(
-                                //           horizontal: 47,
-                                //           vertical: 10,
-                                //         ),
-                                //         child: MouseRegion(
-                                //           cursor: SystemMouseCursors.click,
-                                //           child: GestureDetector(
-                                //             child: const Text(
-                                //               'To Be Submitted',
-                                //               style: TextStyle(
-                                //                 color: Colors.white,
-                                //                 fontSize: 20,
-                                //                 fontWeight: FontWeight.bold,
-                                //                 letterSpacing: 2,
-                                //               ),
-                                //             ),
-                                //             // color: AppColor.primary,
-                                //             onTap: () {
-                                //               // Navigator.push(
-                                //               //   context,
-                                //               //   MaterialPageRoute(
-                                //               //     builder: (BuildContext context) => LoginScreen(),
-                                //               //   ),
-                                //               // );
-                                //             },
-                                //           ),
-                                //         ),
-                                //       ),
-                                //     ),
-                                //   ),
-                                // )
                               ],
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.all(
+                            20.0,
+                          ),
                           child: Container(
                             width: size.width,
-                            // height: 250,
                             decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(20),
+                              color: greybox,
+                              borderRadius: BorderRadius.circular(
+                                20,
+                              ),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.black12,
-                                  offset: const Offset(3.0, 3.0),
+                                  color: shadow,
+                                  offset: const Offset(
+                                    3.0,
+                                    3.0,
+                                  ),
                                   blurRadius: 5.0,
                                   spreadRadius: 3.0,
                                 ),
@@ -542,11 +563,17 @@ class _AssignmentsState extends State<Assignments> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      top: 17.0, left: 17.0),
+                                    top: 17.0,
+                                    left: 17.0,
+                                  ),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: AppColor.primary.withOpacity(0.5),
-                                      borderRadius: BorderRadius.circular(20),
+                                      color: AppColor.primary.withOpacity(
+                                        0.5,
+                                      ),
+                                      borderRadius: BorderRadius.circular(
+                                        20,
+                                      ),
                                     ),
                                     child: Padding(
                                       padding: EdgeInsets.only(
@@ -560,20 +587,22 @@ class _AssignmentsState extends State<Assignments> {
                                         style: TextStyle(
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold,
-                                          color: AppColor.primary1,
+                                          color: primary1text,
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-                                const Padding(
-                                  padding:
-                                      EdgeInsets.only(top: 17.0, left: 17.0),
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 17.0,
+                                    left: 17.0,
+                                  ),
                                   child: Text(
                                     'Organic Chemistry',
                                     style: TextStyle(
                                       fontSize: 20,
-                                      color: Colors.black,
+                                      color: blacktext,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -584,7 +613,9 @@ class _AssignmentsState extends State<Assignments> {
                                       child: GestureDetector(
                                         child: Padding(
                                           padding: const EdgeInsets.only(
-                                              left: 17, top: 12),
+                                            left: 17,
+                                            top: 12,
+                                          ),
                                           child: Text(
                                             'Assign Date',
                                             style: AppTextStyle.style(
@@ -595,14 +626,16 @@ class _AssignmentsState extends State<Assignments> {
                                         ),
                                       ),
                                     ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(right: 20, top: 15.0),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        right: 20,
+                                        top: 15.0,
+                                      ),
                                       child: Text(
                                         '21 Oct 2021',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -615,7 +648,9 @@ class _AssignmentsState extends State<Assignments> {
                                       child: GestureDetector(
                                         child: Padding(
                                           padding: const EdgeInsets.only(
-                                              left: 17, top: 7),
+                                            left: 17,
+                                            top: 7,
+                                          ),
                                           child: Text(
                                             'Last Date',
                                             style: AppTextStyle.style(
@@ -626,14 +661,16 @@ class _AssignmentsState extends State<Assignments> {
                                         ),
                                       ),
                                     ),
-                                    const Padding(
-                                      padding:
-                                          EdgeInsets.only(right: 20, top: 7.0),
+                                    Padding(
+                                      padding: EdgeInsets.only(
+                                        right: 20,
+                                        top: 7.0,
+                                      ),
                                       child: Text(
                                         '27 Oct 2021',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
@@ -660,7 +697,7 @@ class _AssignmentsState extends State<Assignments> {
                                         ),
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding: EdgeInsets.only(
                                         right: 20,
                                         top: 7.0,
@@ -670,68 +707,13 @@ class _AssignmentsState extends State<Assignments> {
                                         'Not Submitted (Expired)',
                                         style: TextStyle(
                                           fontSize: 15,
-                                          color: Colors.black,
+                                          color: blacktext,
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
                                     )
                                   ],
                                 ),
-                                // Center(
-                                //   child: GestureDetector(
-                                //     onTap: () {},
-                                //     child: Container(
-                                //       margin: const EdgeInsets.only(
-                                //         top: 16,
-                                //         bottom: 16,
-                                //       ),
-                                //       child: Container(
-                                //         decoration: BoxDecoration(
-                                //           gradient: LinearGradient(colors: [
-                                //             AppColor.primary1,
-                                //             const AppColor.primary1,
-                                //           ]),
-                                //           boxShadow: [
-                                //             BoxShadow(
-                                //               color: Colors.grey.shade500,
-                                //               blurRadius: 3,
-                                //             )
-                                //           ],
-                                //           color: AppColor.primary1,
-                                //           borderRadius:
-                                //               BorderRadius.circular(35),
-                                //         ),
-                                //         padding: const EdgeInsets.symmetric(
-                                //           horizontal: 47,
-                                //           vertical: 10,
-                                //         ),
-                                //         child: MouseRegion(
-                                //           cursor: SystemMouseCursors.click,
-                                //           child: GestureDetector(
-                                //             child: const Text(
-                                //               'To Be Submitted',
-                                //               style: TextStyle(
-                                //                 color: Colors.white,
-                                //                 fontSize: 20,
-                                //                 fontWeight: FontWeight.bold,
-                                //                 letterSpacing: 2,
-                                //               ),
-                                //             ),
-                                //             // color: AppColor.primary,
-                                //             onTap: () {
-                                //               // Navigator.push(
-                                //               //   context,
-                                //               //   MaterialPageRoute(
-                                //               //     builder: (BuildContext context) => LoginScreen(),
-                                //               //   ),
-                                //               // );
-                                //             },
-                                //           ),
-                                //         ),
-                                //       ),
-                                //     ),
-                                //   ),
-                                // )
                               ],
                             ),
                           ),

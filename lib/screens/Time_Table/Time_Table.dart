@@ -23,7 +23,10 @@ class _TimeTableState extends State<TimeTable> {
           appBar: AppBar(
             title: Text(
               'Timetable',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             centerTitle: true,
             flexibleSpace: Container(
@@ -34,25 +37,81 @@ class _TimeTableState extends State<TimeTable> {
               indicatorWeight: 5,
               tabs: [
                 Tab(
-                  text: 'Mon',
+                  child: Text(
+                    "Mon",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
                 ),
                 Tab(
-                  text: 'Tues',
+                  child: Text(
+                    "Tues",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
                 ),
                 Tab(
-                  text: 'Wed',
+                  child: Text(
+                    "Wed",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
                 ),
                 Tab(
-                  text: 'Thru',
+                  child: Text(
+                    "Thru",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
                 ),
                 Tab(
-                  text: 'Fri',
+                  child: Text(
+                    "Fri",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
                 ),
                 Tab(
-                  text: 'Sat',
+                  child: Text(
+                    "Sat",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
                 ),
                 Tab(
-                  text: 'Sun',
+                  child: Text(
+                    "Sun",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1,
+                    ),
+                  ),
                 ),
               ],
             ),

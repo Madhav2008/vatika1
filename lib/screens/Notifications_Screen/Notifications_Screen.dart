@@ -82,10 +82,12 @@ class NotificationsScreen extends StatelessWidget {
           ),
           children: [
             TextSpan(
-                text: ' Notification Description',
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                ))
+              text: ' Notification Description',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+              ),
+            )
           ],
         ),
       ),
