@@ -7,10 +7,10 @@ mixin AppTextStyle {
   static TextStyle style(
           {double fontSize = 18,
           Color color = Colors.white,
-          FontWeight fontWeight = FontWeight.normal}) =>
+          FontWeight fontWeight = FontWeight.normal,}) =>
       TextStyle(
           fontFamily: "SourceSansPro",
           fontSize: fontSize,
           color: color,
-          fontWeight: fontWeight);
+          fontWeight: fontWeight,);
 }

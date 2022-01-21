@@ -34,9 +34,11 @@ class NavigationDrawerWidget extends StatelessWidget {
               urlImage: urlImage,
               name: name,
               email: email,
-              onClicked: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => const Profile(),
-              )),
+              onClicked: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const Profile(),
+                ),
+              ),
             ),
             Container(
               decoration: BoxDecoration(
@@ -101,7 +103,12 @@ class NavigationDrawerWidget extends StatelessWidget {
       InkWell(
         onTap: onClicked,
         child: Container(
-          padding: padding.add(const EdgeInsets.symmetric(vertical: 40)),
+          color: AppColor.primary1,
+          padding: padding.add(
+            const EdgeInsets.symmetric(
+              vertical: 40,
+            ),
+          ),
           child: Row(
             children: [
               CircleAvatar(

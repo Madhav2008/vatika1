@@ -71,7 +71,7 @@ class _FAQ_ScreenState extends State<FAQ_Screen> {
           ),
         ),
         child: ListView(
-          children: [
+          children: const [
             Card1(),
             Card2(),
             Card3(),

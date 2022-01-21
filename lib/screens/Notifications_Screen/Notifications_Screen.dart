@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:vatika/styles/app_color.dart';
-import 'package:vatika/styles/app_text_style.dart';
 
 class NotificationsScreen extends StatelessWidget {
   const NotificationsScreen({Key? key}) : super(key: key);
@@ -13,7 +12,11 @@ class NotificationsScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Notifications',
-          style: AppTextStyle.style(fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            letterSpacing: 1,
+          ),
         ),
         backgroundColor: AppColor.primary1,
       ),
@@ -23,25 +26,32 @@ class NotificationsScreen extends StatelessWidget {
 
   Widget listView() {
     return ListView.separated(
-        itemBuilder: (context, index) {
-          return listViewItem(index);
-        },
-        separatorBuilder: (context, index) {
-          return Divider(height: 0);
-        },
-        itemCount: 15);
+      itemBuilder: (context, index) {
+        return listViewItem(index);
+      },
+      separatorBuilder: (context, index) {
+        return Divider(height: 0);
+      },
+      itemCount: 15,
+    );
   }
 
   Widget listViewItem(int index) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 13, vertical: 10),
+      margin: EdgeInsets.symmetric(
+        horizontal: 13,
+        vertical: 10,
+      ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           prefixIcon(),
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(left: 10, top: 8),
+              margin: EdgeInsets.only(
+                left: 10,
+                top: 8,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -58,13 +68,19 @@ class NotificationsScreen extends StatelessWidget {
 
   Widget prefixIcon() {
     return Container(
-        height: 50,
-        width: 50,
-        padding: EdgeInsets.all(10),
-        decoration:
-            BoxDecoration(shape: BoxShape.circle, color: Colors.grey.shade300),
-        child:
-            Icon(Icons.notifications, size: 25, color: Colors.grey.shade700));
+      height: 50,
+      width: 50,
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.grey.shade300,
+      ),
+      child: Icon(
+        Icons.notifications,
+        size: 25,
+        color: Colors.grey.shade700,
+      ),
+    );
   }
 
   Widget message(int index) {
@@ -77,7 +93,7 @@ class NotificationsScreen extends StatelessWidget {
           text: 'Message',
           style: TextStyle(
             fontSize: textSize,
-            color: Colors.black,
+            color: Colors.grey.shade500,
             fontWeight: FontWeight.bold,
           ),
           children: [
@@ -85,7 +101,7 @@ class NotificationsScreen extends StatelessWidget {
               text: ' Notification Description',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
-                color: Colors.black,
+                color: Colors.grey.shade500,
               ),
             )
           ],
@@ -102,11 +118,17 @@ class NotificationsScreen extends StatelessWidget {
           children: [
             Text(
               '12-12-2021',
-              style: TextStyle(fontSize: 10),
+              style: TextStyle(
+                fontSize: 10,
+                color: Colors.grey.shade500,
+              ),
             ),
             Text(
               '07:10 AM',
-              style: TextStyle(fontSize: 10),
+              style: TextStyle(
+                fontSize: 10,
+                color: Colors.grey.shade500,
+              ),
             )
           ],
         ));

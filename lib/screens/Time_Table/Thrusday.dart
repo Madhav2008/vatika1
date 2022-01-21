@@ -50,6 +50,7 @@ class _ThrusdayState extends State<Thrusday> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color: blacktext,
                           ),
                         ),
                       ),
@@ -122,6 +123,7 @@ class _ThrusdayState extends State<Thrusday> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color: blacktext,
                           ),
                         ),
                       ),
@@ -194,6 +196,7 @@ class _ThrusdayState extends State<Thrusday> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color: blacktext,
                           ),
                         ),
                       ),
@@ -266,6 +269,7 @@ class _ThrusdayState extends State<Thrusday> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color: blacktext,
                           ),
                         ),
                       ),
@@ -338,6 +342,7 @@ class _ThrusdayState extends State<Thrusday> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color: blacktext,
                           ),
                         ),
                       ),
@@ -410,6 +415,7 @@ class _ThrusdayState extends State<Thrusday> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                            color: blacktext,
                           ),
                         ),
                       ),
