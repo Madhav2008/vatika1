@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:vatika/screens/Notifications_Screen/Open_Notification_Screen.dart';
 import 'package:vatika/styles/app_color.dart';
 
 class NotificationsScreen extends StatelessWidget {
@@ -19,20 +20,280 @@ class NotificationsScreen extends StatelessWidget {
           ),
         ),
         backgroundColor: AppColor.primary1,
+        centerTitle: true,
       ),
-      body: listView(),
-    );
-  }
-
-  Widget listView() {
-    return ListView.separated(
-      itemBuilder: (context, index) {
-        return listViewItem(index);
-      },
-      separatorBuilder: (context, index) {
-        return Divider(height: 0);
-      },
-      itemCount: 15,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const OpenNotificationScreen(),
+                  ),
+                );
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      prefixIcon(),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            left: 10,
+                            top: 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              message(),
+                              TimeAndDate(),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  prefixIcon(),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        left: 10,
+                        top: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          message(),
+                          TimeAndDate(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  prefixIcon(),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        left: 10,
+                        top: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          message(),
+                          TimeAndDate(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  prefixIcon(),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        left: 10,
+                        top: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          message(),
+                          TimeAndDate(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  prefixIcon(),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        left: 10,
+                        top: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          message(),
+                          TimeAndDate(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  prefixIcon(),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        left: 10,
+                        top: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          message(),
+                          TimeAndDate(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  prefixIcon(),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        left: 10,
+                        top: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          message(),
+                          TimeAndDate(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  prefixIcon(),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        left: 10,
+                        top: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          message(),
+                          TimeAndDate(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  prefixIcon(),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        left: 10,
+                        top: 8,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          message(),
+                          TimeAndDate(),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+          ],
+        ),
+      ),
     );
   }
 
@@ -55,8 +316,8 @@ class NotificationsScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  message(index),
-                  TimeAndDate(index),
+                  message(),
+                  TimeAndDate(),
                 ],
               ),
             ),
@@ -83,7 +344,7 @@ class NotificationsScreen extends StatelessWidget {
     );
   }
 
-  Widget message(int index) {
+  Widget message() {
     double textSize = 14;
     return Container(
       child: RichText(
@@ -110,7 +371,7 @@ class NotificationsScreen extends StatelessWidget {
     );
   }
 
-  Widget TimeAndDate(int index) {
+  Widget TimeAndDate() {
     return Container(
         margin: EdgeInsets.only(top: 5),
         child: Row(
