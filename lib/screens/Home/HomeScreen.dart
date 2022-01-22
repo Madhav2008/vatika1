@@ -11,7 +11,6 @@ import 'package:vatika/screens/Profile/ProfileScreen.dart';
 import 'package:vatika/screens/Quiz/screens/main_menu.dart';
 import 'package:vatika/screens/Side%20Drawer/widget/navigation_drawer_widget.dart';
 import 'package:vatika/screens/Theme/provider/theme_provider.dart';
-import 'package:vatika/screens/Theme/widget/change_theme_button_widget.dart';
 import 'package:vatika/screens/Time_Table/Time_Table.dart';
 import 'package:vatika/styles/app_color.dart';
 
