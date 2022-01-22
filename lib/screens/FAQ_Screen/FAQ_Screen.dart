@@ -119,6 +119,10 @@ class Card1 extends StatelessWidget {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? Colors.white
             : Colors.black;
+    final color1 =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade800
+            : Colors.white;
     return ExpandableNotifier(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -128,6 +132,7 @@ class Card1 extends StatelessWidget {
           right: 40,
         ),
         child: Card(
+          color: color1,
           child: Column(
             children: [
               ScrollOnExpand(
@@ -201,6 +206,10 @@ class Card2 extends StatelessWidget {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? Colors.white
             : Colors.black;
+    final color1 =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade800
+            : Colors.white;
     return ExpandableNotifier(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -210,6 +219,7 @@ class Card2 extends StatelessWidget {
           right: 40,
         ),
         child: Card(
+          color: color1,
           child: Column(
             children: [
               ScrollOnExpand(
@@ -281,6 +291,10 @@ class Card3 extends StatelessWidget {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? Colors.white
             : Colors.black;
+    final color1 =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade800
+            : Colors.white;
     return ExpandableNotifier(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -290,6 +304,7 @@ class Card3 extends StatelessWidget {
           right: 40,
         ),
         child: Card(
+          color: color1,
           child: Column(
             children: [
               ScrollOnExpand(
@@ -361,6 +376,10 @@ class Card4 extends StatelessWidget {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? Colors.white
             : Colors.black;
+    final color1 =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade800
+            : Colors.white;
     return ExpandableNotifier(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -370,6 +389,7 @@ class Card4 extends StatelessWidget {
           right: 40,
         ),
         child: Card(
+          color: color1,
           child: Column(
             children: [
               ScrollOnExpand(
@@ -441,6 +461,10 @@ class Card5 extends StatelessWidget {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? Colors.white
             : Colors.black;
+    final color1 =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade800
+            : Colors.white;
     return ExpandableNotifier(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -450,6 +474,7 @@ class Card5 extends StatelessWidget {
           right: 40,
         ),
         child: Card(
+          color: color1,
           child: Column(
             children: [
               ScrollOnExpand(
@@ -521,6 +546,10 @@ class Card6 extends StatelessWidget {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? Colors.white
             : Colors.black;
+    final color1 =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade800
+            : Colors.white;
     return ExpandableNotifier(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -530,6 +559,7 @@ class Card6 extends StatelessWidget {
           right: 40,
         ),
         child: Card(
+          color: color1,
           child: Column(
             children: [
               ScrollOnExpand(
@@ -601,6 +631,10 @@ class Card7 extends StatelessWidget {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? Colors.white
             : Colors.black;
+    final color1 =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade800
+            : Colors.white;
     return ExpandableNotifier(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -610,6 +644,7 @@ class Card7 extends StatelessWidget {
           right: 40,
         ),
         child: Card(
+          color: color1,
           child: Column(
             children: [
               ScrollOnExpand(
@@ -681,6 +716,10 @@ class Card8 extends StatelessWidget {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? Colors.white
             : Colors.black;
+    final color1 =
+        Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+            ? Colors.grey.shade800
+            : Colors.white;
     return ExpandableNotifier(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -690,6 +729,7 @@ class Card8 extends StatelessWidget {
           right: 40,
         ),
         child: Card(
+          color: color1,
           child: Column(
             children: [
               ScrollOnExpand(
