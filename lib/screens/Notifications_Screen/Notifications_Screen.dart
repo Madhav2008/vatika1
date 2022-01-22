@@ -9,6 +9,10 @@ class NotificationsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var date = '12-12-2021';
+    var time = '07:10 AM';
+    var message = 'Message';
+    var ndescription = 'Notification Description';
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -52,8 +56,52 @@ class NotificationsScreen extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              message(),
-                              TimeAndDate(),
+                              RichText(
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                  text: message,
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  children: [
+                                    TextSpan(
+                                      text: ' ' + ndescription,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      date,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    ),
+                                    Text(
+                                      time,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -67,262 +115,8 @@ class NotificationsScreen extends StatelessWidget {
               color: Colors.grey,
               height: 10,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  prefixIcon(),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: 10,
-                        top: 8,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          message(),
-                          TimeAndDate(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Colors.grey,
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  prefixIcon(),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: 10,
-                        top: 8,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          message(),
-                          TimeAndDate(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Colors.grey,
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  prefixIcon(),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: 10,
-                        top: 8,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          message(),
-                          TimeAndDate(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Colors.grey,
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  prefixIcon(),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: 10,
-                        top: 8,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          message(),
-                          TimeAndDate(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Colors.grey,
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  prefixIcon(),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: 10,
-                        top: 8,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          message(),
-                          TimeAndDate(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Colors.grey,
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  prefixIcon(),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: 10,
-                        top: 8,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          message(),
-                          TimeAndDate(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Colors.grey,
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  prefixIcon(),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: 10,
-                        top: 8,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          message(),
-                          TimeAndDate(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Colors.grey,
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  prefixIcon(),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: 10,
-                        top: 8,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          message(),
-                          TimeAndDate(),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Divider(
-              color: Colors.grey,
-              height: 10,
-            ),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget listViewItem(int index) {
-    return Container(
-      margin: EdgeInsets.symmetric(
-        horizontal: 13,
-        vertical: 10,
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          prefixIcon(),
-          Expanded(
-            child: Container(
-              margin: EdgeInsets.only(
-                left: 10,
-                top: 8,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  message(),
-                  TimeAndDate(),
-                ],
-              ),
-            ),
-          ),
-        ],
       ),
     );
   }
@@ -373,25 +167,26 @@ class NotificationsScreen extends StatelessWidget {
 
   Widget TimeAndDate() {
     return Container(
-        margin: EdgeInsets.only(top: 5),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              '12-12-2021',
-              style: TextStyle(
-                fontSize: 10,
-                color: Colors.grey.shade500,
-              ),
+      margin: EdgeInsets.only(top: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            '12-12-2021',
+            style: TextStyle(
+              fontSize: 10,
+              color: Colors.grey.shade500,
             ),
-            Text(
-              '07:10 AM',
-              style: TextStyle(
-                fontSize: 10,
-                color: Colors.grey.shade500,
-              ),
-            )
-          ],
-        ));
+          ),
+          Text(
+            '07:10 AM',
+            style: TextStyle(
+              fontSize: 10,
+              color: Colors.grey.shade500,
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

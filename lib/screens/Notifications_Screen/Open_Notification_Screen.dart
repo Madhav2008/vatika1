@@ -30,8 +30,8 @@ class _OpenNotificationScreenState extends State<OpenNotificationScreen> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              AppColor.primary1,
               AppColor.primary1.withOpacity(0.7),
+              AppColor.primary1,
             ],
           ),
         ),
