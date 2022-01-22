@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
         backgroundColor: color1,
         actions: [
-          ChangeThemeButtonWidget(),
+          // ChangeThemeButtonWidget(),
           Theme(
             data: Theme.of(context).copyWith(
               dividerColor: Colors.white,

@@ -7,6 +7,7 @@ import 'package:vatika/screens/Notifications_Screen/Notifications_Screen.dart';
 import 'package:vatika/screens/Profile/ProfileScreen.dart';
 import 'package:vatika/screens/Quiz/screens/main_menu.dart';
 import 'package:vatika/screens/Theme/provider/theme_provider.dart';
+import 'package:vatika/screens/Theme/widget/change_theme_button_widget.dart';
 import 'package:vatika/screens/Time_Table/Time_Table.dart';
 import 'package:vatika/styles/app_color.dart';
 
@@ -24,6 +25,14 @@ class NavigationDrawerWidget extends StatelessWidget {
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
             ? AppColor.primary1.withOpacity(0.7)
             : AppColor.primary1;
+
+    final mode = Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+        ? "Dark Mode"
+        : "Light Mode";
+
+    final icon = Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
+        ? Icons.dark_mode
+        : Icons.light_mode;
 
     return Drawer(
       child: Material(
@@ -79,12 +88,39 @@ class NavigationDrawerWidget extends StatelessWidget {
                     icon: Icons.notifications_active_outlined,
                     onClicked: () => selectedItem(context, 4),
                   ),
+                  const SizedBox(height: 16),
                   buildMenuItem(
                     text: "FAQ'S",
                     icon: Icons.question_answer,
                     onClicked: () => selectedItem(context, 5),
                   ),
                   const SizedBox(height: 16),
+                  Row(
+                    children: [
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      Icon(
+                        icon,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      const SizedBox(
+                        width: 25,
+                      ),
+                      Text(
+                        mode,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      ChangeThemeButtonWidget(),
+                    ],
+                  ),
                 ],
               ),
             ),
