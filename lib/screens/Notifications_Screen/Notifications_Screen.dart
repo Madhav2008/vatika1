@@ -12,7 +12,6 @@ class NotificationsScreen extends StatelessWidget {
     var date = '12-12-2021';
     var time = '07:10 AM';
     var message = 'Message';
-    var ndescription = 'Notification Description';
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -62,19 +61,626 @@ class NotificationsScreen extends StatelessWidget {
                                 text: TextSpan(
                                   text: message,
                                   style: TextStyle(
-                                    fontSize: 14,
+                                    fontSize: 16,
                                     color: Colors.grey.shade500,
                                     fontWeight: FontWeight.bold,
                                   ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    TextSpan(
-                                      text: ' ' + ndescription,
+                                    Text(
+                                      date,
                                       style: TextStyle(
-                                        fontWeight: FontWeight.w400,
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    ),
+                                    Text(
+                                      time,
+                                      style: TextStyle(
+                                        fontSize: 10,
                                         color: Colors.grey.shade500,
                                       ),
                                     )
                                   ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const OpenNotificationScreen(),
+                  ),
+                );
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      prefixIcon(),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            left: 10,
+                            top: 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                  text: message,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      date,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    ),
+                                    Text(
+                                      time,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const OpenNotificationScreen(),
+                  ),
+                );
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      prefixIcon(),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            left: 10,
+                            top: 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                  text: message,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      date,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    ),
+                                    Text(
+                                      time,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const OpenNotificationScreen(),
+                  ),
+                );
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      prefixIcon(),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            left: 10,
+                            top: 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                  text: message,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      date,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    ),
+                                    Text(
+                                      time,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const OpenNotificationScreen(),
+                  ),
+                );
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      prefixIcon(),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            left: 10,
+                            top: 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                  text: message,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      date,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    ),
+                                    Text(
+                                      time,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const OpenNotificationScreen(),
+                  ),
+                );
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      prefixIcon(),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            left: 10,
+                            top: 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                  text: message,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      date,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    ),
+                                    Text(
+                                      time,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const OpenNotificationScreen(),
+                  ),
+                );
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      prefixIcon(),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            left: 10,
+                            top: 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                  text: message,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      date,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    ),
+                                    Text(
+                                      time,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const OpenNotificationScreen(),
+                  ),
+                );
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      prefixIcon(),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            left: 10,
+                            top: 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                  text: message,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                  top: 10,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      date,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    ),
+                                    Text(
+                                      time,
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: Colors.grey.shade500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Divider(
+              color: Colors.grey,
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const OpenNotificationScreen(),
+                  ),
+                );
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      prefixIcon(),
+                      Expanded(
+                        child: Container(
+                          margin: EdgeInsets.only(
+                            left: 10,
+                            top: 8,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              RichText(
+                                maxLines: 3,
+                                overflow: TextOverflow.ellipsis,
+                                text: TextSpan(
+                                  text: message,
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    color: Colors.grey.shade500,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
                               Padding(
@@ -134,58 +740,6 @@ class NotificationsScreen extends StatelessWidget {
         Icons.notifications,
         size: 25,
         color: Colors.grey.shade700,
-      ),
-    );
-  }
-
-  Widget message() {
-    double textSize = 14;
-    return Container(
-      child: RichText(
-        maxLines: 3,
-        overflow: TextOverflow.ellipsis,
-        text: TextSpan(
-          text: 'Message',
-          style: TextStyle(
-            fontSize: textSize,
-            color: Colors.grey.shade500,
-            fontWeight: FontWeight.bold,
-          ),
-          children: [
-            TextSpan(
-              text: ' Notification Description',
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: Colors.grey.shade500,
-              ),
-            )
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget TimeAndDate() {
-    return Container(
-      margin: EdgeInsets.only(top: 5),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            '12-12-2021',
-            style: TextStyle(
-              fontSize: 10,
-              color: Colors.grey.shade500,
-            ),
-          ),
-          Text(
-            '07:10 AM',
-            style: TextStyle(
-              fontSize: 10,
-              color: Colors.grey.shade500,
-            ),
-          )
-        ],
       ),
     );
   }

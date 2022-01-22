@@ -60,8 +60,9 @@ class _MainMenuState extends State<MainMenu> {
             : Colors.black;
     final color1 =
         Provider.of<ThemeProvider>(context).themeMode == ThemeMode.dark
-            ? Colors.grey.shade900.withOpacity(0.8)
+            ? Colors.grey.shade800.withOpacity(0.5)
             : Colors.white;
+
     return Scaffold(
       appBar: AppBar(
         title: Row(

@@ -11,10 +11,12 @@ Future<void> main() async {
   runApp(
     const MyApp(),
   );
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown,
-  ]);
+  await SystemChrome.setPreferredOrientations(
+    [
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ],
+  );
 }
 
 class MyApp extends StatelessWidget {
