@@ -853,7 +853,9 @@ void onSelected(BuildContext context, int item) {
       break;
     case 2:
       Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
+        MaterialPageRoute(
+          builder: (context) => LoginScreen(),
+        ),
         (route) => false,
       );
   }

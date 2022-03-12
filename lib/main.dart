@@ -1,21 +1,16 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:vatika/screens/Login/LoginScreen.dart';
 import 'package:vatika/screens/Theme/provider/theme_provider.dart';
 import 'package:vatika/styles/app_color.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(
     const MyApp(),
-  );
-  await SystemChrome.setPreferredOrientations(
-    [
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ],
   );
 }
 
@@ -36,8 +31,10 @@ class MyApp extends StatelessWidget {
               splash: Image.asset(
                 '../assets/images/Vatika.gif',
               ),
-              animationDuration: const Duration(milliseconds: 1000),
-              nextScreen: const LoginScreen(),
+              animationDuration: const Duration(
+                milliseconds: 1000,
+              ),
+              nextScreen: LoginScreen(),
               splashTransition: SplashTransition.sizeTransition,
               backgroundColor: AppColor.primary1,
               duration: 3000,

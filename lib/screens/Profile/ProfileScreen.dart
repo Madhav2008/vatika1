@@ -668,7 +668,7 @@ class _ProfileState extends State<Profile> {
                               context,
                               MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    const LoginScreen(),
+                                   LoginScreen(),
                               ),
                             );
                           },
