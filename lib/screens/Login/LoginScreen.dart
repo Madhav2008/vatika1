@@ -10,7 +10,7 @@ import 'package:vatika/styles/app_color.dart';
 import 'package:vatika/styles/app_text_style.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({Key? key}) : super(key: key); 
+  LoginScreen({Key? key}) : super(key: key);
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
